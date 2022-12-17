@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head th:replace="/ClientStyle/common/head::head">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/chosen.css">
+    <script src="https://use.fontawesome.com/697d84ba14.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <!-- <script src="/assets/ckeditor/ckeditor.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <script src="//cdn.ckeditor.com/4.20.0/basic/ckeditor.js"></script>
+    <!-- <script src="assets/js/mutiple-select-js.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+    <!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+    <title>Document</title>
+</head>
+
+<body>
+  <!--   <div class="header-search">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="logo">
+                        <img src="assets/image/logo/logo4.png" alt="">
+                    </div>
+
+                </div>
+                <div class="col-md-8">
+                    <div class="search">
+                        <form action="" method="get" class="search-box">
+                            <input type="text" placeholder="Nhập Tên Cây Dược Liệu Cần Tìm">
+                            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </form>
+                        <div class="search-voice"><a href="#"><i class="fa fa-microphone" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <ul>
+                        <li class="title"> <a href="#">Trang Chủ</a> </li>
+                        <li class="title"> <a href="#">Tra Cứu Dược Liệu</a>
+
+                        </li>
+                        <li class="title"> <a href="#">Giới Thiệu</a></li>
+                        <li class="title"><a href="#">Bài Viết</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 d-flex justify-content-end">
+                    <ul>
+                        <li class="title"><a href="#">Đăng Nhập</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div> -->
+        <header th:replace="/ClientStyle/common/header::header">
+	        <div class="header-search">
+	            <div class="container">
+	                <div class="row">
+	                    <div class="col-md-3">
+	                        <div class="logo">
+	                            <img src="assets/image/logo/logo4.png" alt="">
+	                        </div>
+	
+	                    </div>
+	                    <div class="col-md-8">
+	                        <div class="search">
+	                            <form action="" method="get" class="search-box">
+	                                <input type="text" placeholder="Nhập Tên Cây Dược Liệu Cần Tìm">
+	                                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+	                            </form>
+	                            <div class="search-voice"><a href="#"><i class="fa fa-microphone"
+	                                        aria-hidden="true"></i></a>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <ul>
+                            <li class="title"> <a href="#">Trang Chủ</a> </li>
+                            <li class="title"> <a href="#">Tra Cứu Dược Liệu</a>
+
+                            </li>
+                            <li class="title"> <a href="#">Giới Thiệu</a></li>
+                            <li class="title"><a href="#">Bài Viết</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-end">
+                        <ul>
+                            <li class="title"><a href="#">Đăng Nhập</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="row post-button d-flex justify-content-center">
+                        <button data-toggle="modal" data-target="#cauhoi" id="button-modal" type="submit" style="margin:10px 0;" class="btn btn-success">Đăng Một Câu Hỏi</button>
+                    </div>
+                    <form th:action ="@{/TraCuuCayDuocLieu/Hoi-Dap}"  class="form-inline my-2 my-lg-0 row">
+                          <input name="key" class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm câu hỏi" aria-label="Search">
+                          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm Kiếm</button>
+                    </form>
+                    <!-- <div class="row"> -->
+                        <div class="forum row">
+	                        <th:block   th:each="object:${cauhoi}">
+	                        	 <div class="forum-question col-md-12">
+	                                <div class="question-and-date">
+	                                    <div class="avatar-user">
+	        
+	                                    </div>
+	                                    <div class="user-question">
+	                                        <p> <a th:href="@{/TraCuuCayDuocLieu/Hoi-Dap/forum/ (id =${object.getMacauhoi()}) }" th:text="${object.getTencauhoi()}">Anh chị cho em hỏi bị hôi chân nên làm sao</a> </p>
+	                                    </div>
+	                                    <div class="question-date">
+	                                        <p th:text="${object.layThoiGianDangCauHoiSoVoiHienTai()}">Đăng cách đây 1h trước</p>
+	                                    </div>
+	                                </div>
+	                                <div class="answer-and-view">
+	                                    <div class="answer-quality">
+	                                        <i class="fa fa-comment-o" aria-hidden="true"></i>
+	                                        <p th:text="${object.getTraloi().size()}">200</p>
+	                                    </div>
+	                                    <!-- <div class="view-quality">
+	                                        <i class="ti-eye"></i>
+	                                        <p>200</p>
+	                                    </div> -->
+	                                </div>
+	                            </div>
+	                        </th:block>
+                           
+                            
+                            <div class="row d-flex justify-content-start">
+					              <div class="pagination col-md-12">
+					            	 <li th:if="${page_present}>1" class="page-item "><a class="page-link active"
+					                        th:href="@{/TraCuuCayDuocLieu/Hoi-Dap (page=${page_present}-1, key=${key})}">Trước
+					                    </a></li>
+					                <!-- 	<th:block th:each="i: ${#numbers.sequence(1,3)}"> -->
+					                <li th:if="${page_present}<=${count}" class="page-item active"><a class="page-link active"
+					                        th:text="${page_present}" th:href="@{/TraCuuCayDuocLieu/Hoi-Dap( page=${page_present}, key=${key})}"><span
+					                            class="sr-only">(current)</span> </a></li>
+					                <li th:if="${page_present}+1<=${count}"><a class="page-link" th:text="${page_present}+1"
+					                        th:href="@{/TraCuuCayDuocLieu/Hoi-Dap(page=${page_present}+1, key=${key})}"><span
+					                            class="sr-only">(current)</span> </a></li>
+					                <li th:if="${page_present}+2<=${count}"><a class="page-link" th:text="${page_present}+2"
+					                        th:href="@{/TraCuuCayDuocLieu/Hoi-Dap(page=${page_present}+1, key=${key})}"><span
+					                            class="sr-only">(current)</span> </a></li>
+					                <!-- </th:block> -->
+					                <li th:if="${page_present}<${count}" class="page-item "><a class="page-link active"
+					                        th:href="@{/TraCuuCayDuocLieu/Hoi-Dap(page=${page_present}+1,key=${key})}">Kế
+					                        Tiếp </a></li>
+					             </div>  
+       					    </div>
+        
+                        </div>
+                    
+                    <!-- </div> -->
+        
+                </div>
+                <div class="col-md-3">
+                    <div>
+                        <div class="statistical">
+                            <div class="statistical-title">Số Liệu Thống Kê</div>
+                            <div class="statistical-1">
+                                <p><span class="statistical-1-1" th:text="${socauhoi}">123</span> Câu Hỏi</p>
+                                <p><span class="statistical-1-1" th:text="${socautraloi}" >500</span> Câu Trả Lời</p>
+                            </div>
+                        </div>
+                        <div class="statistical">
+                            <div class="statistical-title">Đang Hoạt Động</div>
+                            <div class="statistical-1">
+                                <div class="online-user" th:each="object:${userlist}">
+									<div>
+										<p>
+											<i class="ti-user" style="margin-right: 10px;"></i><span th:text="${object.getHovaten()}">Hồ Chí Vinh</span><i
+												class="ti-control-record"
+												style="margin-left: 7px; color: #5BBD;"></i>
+										</p>
+									</div>
+								</div>                     
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <!-- Câu Hỏi -->
+    <div class="modal fade" id="cauhoi" tabindex="-1" role="dialog"  aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <form th:action="@{/TraCuuCayDuocLieu/Post}" method="POST"  class="modal-dialog modal-dialog-centered" role="document" enctype="multipart/form-data">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Gửi Một Cây Hỏi</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="">Ảnh Đính Kèm Nếu Có</label>
+                        <input name="anhdinhkem" type="file" class="form-control" accept="image/*"  placeholder="Ảnh Đính Kèm">
+                    </div>
+                    <div class="form-group">
+                        <input name ="tieude" type="text" class="form-control" placeholder="Nhập Tiêu Đề Câu Hỏi Của Bạn. Lưu ý viết có dấu, ngắn gọn" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea  name="noidungcauhoi" id="editor1" cols="100"  rows="10" placeholder="Nhập vào nội dung báo cáo của bạn: Ví dụ:Ngôn ngữ thô tục, kích động bạo lực,.." required></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                    <button type="submit" class="btn btn-primary">Gửi Câu Hỏi</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--  -->
+  
+    <div id="space"></div>
+     <div id="footer" th:replace="/ClientStyle/common/footer::footer">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <p id="footer-content">Nội dung của website này chỉ mang tính chất tham khảo. Vui lòng hỏi ý kiến của
+                    bác sĩ</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var main_image = document.getElementsByClassName("main-image");
+    var thumbnail = document.getElementsByClassName("thumbnail");
+    for (var i = 0; i < thumbnail.length; i++) {
+        thumbnail[i].addEventListener("click", function () {
+            main_image[0].src = this.src;
+            // this.classList.add("active-image");
+        })
+    }
+
+    var recommentto = document.querySelectorAll(".repcomment-to");
+    var repcomment = document.querySelectorAll(".repcomment");
+    console.log(repcomment);
+    for (let i = 0; i < recommentto.length; i++) {
+        recommentto[i].addEventListener("click", function () {
+            repcomment[i].style.display = "block";
+        })
+    }
+
+    var btnmodal = document.getElementById("button-modal");
+    var modal = document.getElementById("modal");
+    btnmodal.addEventListener("click", function () {
+        modal.style.display = "flex";
+    })
+
+    var close = document.getElementById("close");
+    close.addEventListener("click", function () {
+        modal.style.display = "none";
+    })
+
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('.image-upload-wrap').hide();
+
+                $('.file-upload-image').attr('src', e.target.result);
+                $('.file-upload-content').show();
+
+                $('.image-title').html(input.files[0].name);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+
+        } else {
+            removeUpload();
+        }
+    }
+
+    function removeUpload() {
+        $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+        $('.file-upload-content').hide();
+        $('.image-upload-wrap').show();
+        $('#predict').hide();
+        $(".loader-frame").hide();
+        $('.predict-frame').hide();
+    }
+    $('.image-upload-wrap').bind('dragover', function () {
+        $('.image-upload-wrap').addClass('image-dropping');
+    });
+    $('.image-upload-wrap').bind('dragleave', function () {
+        $('.image-upload-wrap').removeClass('image-dropping');
+    });
+
+</script>
+<script>
+    var editor = CKEDITOR.replace('editor1');
+    editor.on( 'required', function( evt ) {
+    editor.showNotification( 'Vui Lòng Nhập Câu Hỏi Của Bạn', 'warning' );
+    evt.cancel();
+} );
+</script>
+<script  th:inline="javascript">
+  		  var check = /*[[${result_post}]]*/"";
+	  		if (check == "success") {
+	  			$.notify({
+	  				// title: "T Thành Công: ",
+	  				message: "Gửi Câu Hỏi Thành Công! Vui Lòng Chờ Phê Duyệt",
+	  				icon: 'fa fa-check'
+	  			}, {
+	  				type: "success"
+	  			});
+
+	  		}
+	  		else if (check == "error") {
+	  			$.notify({
+	  				// title: "T Thành Công: ",
+	  				message: "Tính Vị Đã Tồn Tại",
+	  				icon: 'fa fa-exclamation-triangle'
+	  			}, {
+	  				type: "danger"
+	  			});
+	  		}
+</script>
+
+</html>

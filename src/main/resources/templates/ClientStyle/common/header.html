@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<header th:fragment="header">
+        <div class="header-search">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="logo">
+                            <img th:src="@{/ClientStyle/assets/image/logo/logo4.png}" alt="">
+                        </div>
+
+                    </div>
+                    <div class="col-md-8">
+                        <div class="search">
+                            <form th:action="@{/Tra-Cuu-Cay-Duoc-Lieu}" method="get" class="search-box">
+                                <input type="text" name="key" placeholder="Nhập Tên Cây Dược Liệu Cần Tìm">
+                                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </form>
+                            <div class="search-voice"><a href="#"><i class="fa fa-microphone"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <ul>
+                            <li class="title"> <a th:href="@{/Trang-Chu}">Trang Chủ</a> </li>
+                            <li class="title main-title dropdown"> 
+                                <a href="#" class="dropdown-toggle" aria-hidden="true" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tra Cứu</a>
+                                <ul class="sub-title dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li class="sub-title-item  dropdown-item"> <a th:href="@{/Tra-Cuu-Cay-Duoc-Lieu}">Tra Cứu</a></li>
+                                    <li class="sub-title-item dropdown-item"> <a href="#">Tra Cứu Bằng Hình Ảnh</a></li>
+                                </ul>
+                            </li>
+                            <li class="title"> <a href="#">Giới Thiệu</a></li>
+                            <li class="title"><a th:href="@{/TraCuuCayDuocLieu/Danh-Sach-Bai-Viet}">Bài Viết</a></li>
+                           
+                            <li class="title"> <a th:href="@{/TraCuuCayDuocLieu/Hoi-Dap}">Diễn Đàn Hỏi Đáp</a></li>
+                           
+                        </ul>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-end">
+                      <th:block th:if="${nguoidung == null}">
+	                        <ul>
+	                            <li class="title"><a href="/login">Đăng Nhập</a></li>
+	                        </ul>
+                       </th:block>
+                        <ul th:if="${nguoidung !=null}">
+                            <li class="title main-title dropdown"> 
+                                <a href="#" class="dropdown-toggle" aria-hidden="true" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" th:text="${nguoidung.getHovaten()}"></a>
+                                <ul class="sub-title dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li class="sub-title-item  dropdown-item"> <a  th:href="@{/login}">Đăng Xuất</a></li>
+                                    <li class="sub-title-item dropdown-item"> <a href="#"> Đổi Mật Khẩu</a></li>
+                                    <li class="sub-title-item dropdown-item"><a th:href="@{/TraCuuCayDuocLieu/Them-Bai-Viet}">Đăng Bài Viết</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head th:replace="/ClientStyle/common/head::head">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/chosen.css">
+  <script src="https://use.fontawesome.com/697d84ba14.js"></script>
+  <!-- <script src="assets/js/mutiple-select-js.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+    <!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+    <title>Document</title>
+</head>
+
+<body>
+	<header th:replace="/ClientStyle/common/header::header">
+	</header>
+    <!-- <div class="header-search">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="logo">
+                        <img src="assets/image/logo/logo4.png" alt="">
+                    </div>
+
+                </div>
+                <div class="col-md-8">
+                    <div class="search">
+                        <form action="" method="get" class="search-box">
+                            <input type="text" placeholder="Nhập Tên Cây Dược Liệu Cần Tìm">
+                            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </form>
+                        <div class="search-voice"><a href="#"><i class="fa fa-microphone" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <ul>
+                        <li class="title"> <a href="#">Trang Chủ</a> </li>
+                        <li class="title"> <a href="#">Tra Cứu Dược Liệu</a>
+
+                        </li>
+                        <li class="title"> <a href="#">Giới Thiệu</a></li>
+                        <li class="title"><a href="#">Bài Viết</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 d-flex justify-content-end">
+                    <ul>
+                        <li class="title"><a href="#">Đăng Nhập</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="content row" style="margin:0;">
+            
+        <div class="col-md-8">
+            <div class="details">
+                <div class="details-image">
+                   <div class="main-img">
+						<img
+							th:src="@{'/Admin/assets/img/AnhCayDuocLieu/'+${cayduoclieu.getHinh().get(0).getTenhinh()}}"
+							alt="" class="main-image">
+					</div>
+					<div class="img-thumbnail">
+						<th:block th:each="object:${cayduoclieu.getHinh()}">
+							<img th:src="@{'/Admin/assets/img/AnhCayDuocLieu/'+${object.getTenhinh()}}" alt="" class="thumbnail">
+						</th:block>
+					</div>
+                </div>
+                <div class="details-info">
+                    <div class="">
+                       <p class="name">
+							<span th:text="${cayduoclieu.getTenduoclieu()}"></span>
+						</p>
+
+                        <p><span style=""><strong>Tên Khoa Học:&nbsp;</strong><span th:text="${cayduoclieu.getTenkhoahoc()}"></span></span></p>
+
+                        <p><span style=""><strong>Tên Khác:&nbsp;</strong>
+	                         <th:block th:each="object:${cayduoclieu.getTengoikhac()}"> 
+								 	<span th:text="${object.getTengoi()}+','">
+								 		Tên Gọi
+								 	</span>
+							 </th:block></span>
+					    </p>
+                        
+                        <p><span style=""><strong>Họ Dược Liệu:&nbsp;</strong>
+                        	 <th:block th:each="object:${cayduoclieu.getMaho()}"> 
+							 	<span th:text="${object.getTenhoduoclieu()}+','">
+							 		Tên Gọi
+							 	</span>
+							 </th:block></span>
+					  	</p>
+
+                        <p><span style=""><strong>Phân Bố:&nbsp;</strong> 
+                        	<th:block th:each="object:${cayduoclieu.getNoiphanbo()}"> 
+							 	<span th:text="${object.getPhanbo()}+','">
+							 		nơi phân bố
+							 	</span>
+							 </th:block></span>
+                        </p>
+
+                        <p><span style=""><strong>Công Dụng:&nbsp;</strong>
+                        	<th:block th:each="object:${cayduoclieu.getCongdung()}"> 
+							 	<span th:text="${object.getTencongdung()}+','">
+							 		nơi phân bố
+							 	</span>
+							 </th:block></span>
+                        </p>
+
+                        <p><span style=""><strong>Chủ Trị:&nbsp;</strong>
+                        	<th:block th:each="object:${cayduoclieu.getBenh()}">
+								<span th:text="${object.getTenbenh()}">
+								</span>
+							</th:block></span>
+                        </p>
+
+                        <p><span style=""><strong>Bộ Phận Sử Dụng:&nbsp;</strong>
+	                        <th:block th:each="object:${cayduoclieu.getBophansudung()}">
+								<span th:text="${object.getTenbophan()}">
+								</span>
+							</th:block></span>
+                        </p>
+
+                        <p><span style=""><strong>Tính Vị:&nbsp;</strong>
+                        	<th:block th:each="object:${cayduoclieu.getTinhvi()}"> 
+							 	<span th:text="${object.getTentinhvi()}+','">
+							 		Tính Vị
+							 	</span>
+							 </th:block></span>
+                        </p>
+
+                        <p><span style=""><strong>Quy Kinh:&nbsp;</strong>
+                        	<th:block th:each="object:${cayduoclieu.getQuykinh()}"> 
+							 	<span th:text="${object.getTenquykinh()}+','">
+							 		Quy Kinh
+							 	</span>
+							 </th:block></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-informations">
+                <div class="detail-informations-item">
+                    <p class="detail-informations-item-title"><span style="font-size:20px"><strong>Mô tả:</strong></span></p>
+
+                    <p class="detail-informations-item-content" th:text="${cayduoclieu.getMota()}">Dạng d&acirc;y leo bằng th&acirc;n quấn d&agrave;i 2-5m. Vỏ th&acirc;n m&agrave;u n&acirc;u đỏ,
+                        c&oacute; nhiều l&ocirc;ng mịn.L&aacute; mọc đối, phiến l&aacute; nguy&ecirc;n, h&igrave;nh bầu
+                        dục,
+                        ch&oacute;p l&aacute; nhọn, gốc l&aacute; tr&ograve;n, d&agrave;i 4-14cm, rộng 2-9cm.Hoa nhỏ,
+                        m&agrave;u lục v&agrave;ng nhạt, mọc th&agrave;nh xim ở n&aacute;ch l&aacute;.Quả gồm 2 đại xếp
+                        ngang ra hai b&ecirc;n tr&ocirc;ng như đ&ocirc;i sừng b&ograve;. Hạt dẹt mang một m&agrave;o
+                        l&ocirc;ng mịn. To&agrave;n c&acirc;y c&oacute; nhựa mủ m&agrave;u trắng như sữa.Củ b&ecirc;n
+                        trong
+                        c&oacute; m&agrave;u trắng v&agrave; chứa nhiều nhựa. Củ thường nhỏ hơn h&agrave; thủ &ocirc; đỏ
+                    </p>
+
+                </div>
+                <div  class="detail-informations-item" >
+                    <p><span style="font-size: 20px;"><strong>Tác Dụng Dược Lý:</strong></span></p>
+                    <p th:text="${cayduoclieu.getTacdungduocly()}" >Dạng d&acirc;y leo bằng th&acirc;n quấn d&agrave;i 2-5m. Vỏ th&acirc;n m&agrave;u n&acirc;u đỏ,
+                        c&oacute; nhiều l&ocirc;ng mịn.L&aacute; mọc đối, phiến l&aacute; nguy&ecirc;n, h&igrave;nh bầu
+                        dục,
+                        ch&oacute;p l&aacute; nhọn, gốc l&aacute; tr&ograve;n, d&agrave;i 4-14cm, rộng 2-9cm.Hoa nhỏ,
+                        m&agrave;u lục v&agrave;ng nhạt, mọc th&agrave;nh xim ở n&aacute;ch l&aacute;.Quả gồm 2 đại xếp
+                        ngang ra hai b&ecirc;n tr&ocirc;ng như đ&ocirc;i sừng b&ograve;. Hạt dẹt mang một m&agrave;o
+                        l&ocirc;ng mịn. To&agrave;n c&acirc;y c&oacute; nhựa mủ m&agrave;u trắng như sữa.Củ b&ecirc;n
+                        trong
+                        c&oacute; m&agrave;u trắng v&agrave; chứa nhiều nhựa. Củ thường nhỏ hơn h&agrave; thủ &ocirc; đỏ
+                    </p>
+                </div>
+                <div  class="detail-informations-item">
+                    <p><span style="font-size:20px"><strong>Lưu Ý:</strong></span></p>
+
+                    <p th:text="${cayduoclieu.getLuuy()}">Dạng d&acirc;y leo bằng th&acirc;n quấn d&agrave;i 2-5m. Vỏ th&acirc;n m&agrave;u n&acirc;u đỏ,
+                        c&oacute; nhiều l&ocirc;ng mịn.L&aacute; mọc đối, phiến l&aacute; nguy&ecirc;n, h&igrave;nh bầu
+                        dục,
+                        ch&oacute;p l&aacute; nhọn, gốc l&aacute; tr&ograve;n, d&agrave;i 4-14cm, rộng 2-9cm.Hoa nhỏ,
+                        m&agrave;u lục v&agrave;ng nhạt, mọc th&agrave;nh xim ở n&aacute;ch l&aacute;.Quả gồm 2 đại xếp
+                        ngang ra hai b&ecirc;n tr&ocirc;ng như đ&ocirc;i sừng b&ograve;. Hạt dẹt mang một m&agrave;o
+                        l&ocirc;ng mịn. To&agrave;n c&acirc;y c&oacute; nhựa mủ m&agrave;u trắng như sữa.Củ b&ecirc;n
+                        trong
+                        c&oacute; m&agrave;u trắng v&agrave; chứa nhiều nhựa. Củ thường nhỏ hơn h&agrave; thủ &ocirc; đỏ
+                    </p>
+
+                </div>
+                <div  class="detail-informations-item">
+                    <p><span style="font-size:20px"><strong>Liều Dùng Và Cách Dùng:</strong></span></p>
+                    <p th:text="${cayduoclieu.getLieudungvacachdung()}">Dạng d&acirc;y leo bằng th&acirc;n quấn d&agrave;i 2-5m. Vỏ th&acirc;n m&agrave;u n&acirc;u đỏ,
+                        c&oacute; nhiều l&ocirc;ng mịn.L&aacute; mọc đối, phiến l&aacute; nguy&ecirc;n, h&igrave;nh bầu
+                        dục,
+                        ch&oacute;p l&aacute; nhọn, gốc l&aacute; tr&ograve;n, d&agrave;i 4-14cm, rộng 2-9cm.Hoa nhỏ,
+                        m&agrave;u lục v&agrave;ng nhạt, mọc th&agrave;nh xim ở n&aacute;ch l&aacute;.Quả gồm 2 đại xếp
+                        ngang ra hai b&ecirc;n tr&ocirc;ng như đ&ocirc;i sừng b&ograve;. Hạt dẹt mang một m&agrave;o
+                        l&ocirc;ng mịn. To&agrave;n c&acirc;y c&oacute; nhựa mủ m&agrave;u trắng như sữa.Củ b&ecirc;n
+                        trong
+                        c&oacute; m&agrave;u trắng v&agrave; chứa nhiều nhựa. Củ thường nhỏ hơn h&agrave; thủ &ocirc; đỏ
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-2">
+            <iframe width="420" height="345" src="https://www.youtube.com/embed/jOzfODxrd1Q">
+            </iframe>
+            <iframe width="420" height="345" src="https://www.youtube.com/embed/S-gf2qLMJbU">
+            </iframe>
+        </div>
+    </div>
+   
+    <div id="space"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-left" style="color:#006600; font-size:28px">
+                <p>Có Thể Bạn Quan Tâm</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3" th:if="${object.getHinh().size()==3}" th:each="object:${danhsachngaunhien}">
+                <div class="plant-item">
+                    <div class="plant-item-img">
+                         <img th:src="@{'/ClientStyle/assets/img/AnhcayDuocLieu/'+${object.getHinh().get(0).getTenhinh()}}" alt="">
+                    </div>
+                    <div class="plant-item-name">
+                        <p><a th:href="@{/TraCuuCayDuocLieu/Chi-Tiet-Cay-Duoc-Lieu ( id=${object.getMaduoclieu()} ) }"style="text-decoration:none; color:#006600;" th:text="${object.getTenduoclieu()}">cây cải thìa</a></p>
+                    </div>
+                </div>
+            </div>
+           <!--  <div class="col-md-3">
+                <div class="plant-item">
+                    <div class="plant-item-img">
+                        <img src="image/pexels-michael-fischer-606506.jpg">
+                    </div>
+                    <div class="plant-item-name">
+                        <p><a href="#" style="text-decoration:none; color:#006600;">cây cải thìa</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="plant-item">
+                    <div class="plant-item-img">
+                        <img src="image/pexels-michael-fischer-606506.jpg">
+                    </div>
+                    <div class="plant-item-name">
+                        <p><a href="#" style="text-decoration:none; color:#006600;">cây cải thìa</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="plant-item">
+                    <div class="plant-item-img">
+                        <img src="image/pexels-michael-fischer-606506.jpg">
+                    </div>
+                    <div class="plant-item-name">
+                        <p><a href="#" style="text-decoration:none; color:#006600;">cây cải thìa</a></p>
+                    </div>
+                </div>
+            </div> -->
+        </div>         
+    </div>
+    <div id="space"></div>
+    <div id="footer" th:replace="/ClientStyle/common/footer::footer">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <p id="footer-content">Nội dung của website này chỉ mang tính chất tham khảo. Vui lòng hỏi ý kiến của bác sĩ</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+     var main_image = document.getElementsByClassName("main-image");
+    var thumbnail = document.getElementsByClassName("thumbnail");
+    for (var i = 0; i < thumbnail.length; i++) {
+        thumbnail[i].addEventListener("click", function () {
+            main_image[0].src = this.src;
+            // this.classList.add("active-image");
+        })
+    }
+</script>
+</html>

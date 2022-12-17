@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng Nhập</title>
+  <link rel="stylesheet" th:href="@{/ClientStyle/assets/css/login.css}">
+
+</head>
+<body>
+	<!-- public Nguoidung save (String sdt,String hovaten,String email,int gioitinh
+			,String taikhoan, String matkhau,String ngaysinh) -->
+<div class="login-page">
+  <div class="form">
+    <form class="register-form">
+      <input name="sdt" id="sdt" type="text" placeholder="Số Điện Thoại" required/>
+      <input name="hovaten" id="hovaten" type="text" placeholder="Họ Và Tên" required/>
+      <input name="email" id="email" type="text" placeholder="Địa Chỉ Email"/>
+
+      <select id="gioitinh" name="gioitinh">
+        <option value="0">Nam</option>
+        <option value="1">Nữ</option>
+      </select>
+
+      <input id="ngaysinh" name="ngaysinh" type="date" placeholder="Ngày Sinh"/>
+
+      <input id="taikhoan" name="taikhoan" type="text" placeholder="Tài Khoản" required/>
+
+      <input  id="pass" name="matkhau" type="password" placeholder="Mật Khẩu" required/>
+
+      <input id="re_pass" name="nhaplaimatkhau" type="password" placeholder="Nhập Lại Mật Khẩu" required/>
+     
+      <button id="dangki" type="button">Đăng Kí</button>
+      <p class="message">Đã Đăng Kí? <a href="#">Đăng Nhập</a></p>
+    </form>
+    <form class="login-form" th:action="@{/login}" method="POST">
+      <input type="text" placeholder="Tên Đăng Nhập" name="username">
+      <input type="password" placeholder="Mật Khẩu" name="password">
+      <button type="submit">Đăng Nhập</button>
+      <p class="message">Chưa Đăng Kí?<a href="#">Tạo Tài Khoản Mới</a></p>
+    </form>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script >
+  $('.message a').click(function(){
+	   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+	});
+  </script>
+   <script>
+    $(document).ready(function(){
+
+      $("#dangki").click(function(){
+        let matkhau =$("#pass").val();
+        let re_matkhau=$("#re_pass").val();
+        let sdt =$("#sdt").val();
+        let hovaten =$("#hovaten").val();
+        let email=$("#email").val();
+        let gioitinh =$("#gioitinh").val();
+        let ngaysinh =$("#ngaysinh").val();
+        let taikhoan =$("#taikhoan").val();
+
+        
+        
+        if(matkhau !=re_matkhau){
+          alert("Mật Khẩu Nhập Lại Không Trùng Khớp");
+          event.preventDefault();
+        }
+        else if (!matkhau || !re_matkhau || !sdt || !hovaten || !email || !gioitinh || !ngaysinh || !taikhoan) {
+          alert("Vui Lòng Điền Đầy Đủ Thông Tin")
+        }
+        else {
+          $.ajax({
+            type:"POST",
+            url:"/TraCuuCayDuocLieu/Dang-Ki-Nguoi-Dung",
+            data:{
+              matkhau:matkhau,
+              sdt:sdt,
+              hovaten:hovaten,
+              email:email,
+              gioitinh:gioitinh,
+              ngaysinh:ngaysinh,
+              taikhoan:taikhoan,
+              matkhau:matkhau
+            },
+            success: function (data){
+            	alert(data);
+            	event.preventDefault();
+            }
+          })
+        }
+      })
+    })
+  </script>
+
+</body>
+</html>

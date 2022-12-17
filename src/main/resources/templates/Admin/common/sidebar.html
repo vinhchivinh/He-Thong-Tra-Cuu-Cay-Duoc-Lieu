@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+ 	<div th:fragment="sidebar_over" class="app-sidebar__overlay" data-toggle="sidebar"></div>
+    <aside th:fragment="sidebar" class="app-sidebar">
+      <!-- <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" alt="User Image">
+        <div>
+          <p class="app-sidebar__user-name">John Doe</p>
+          <p class="app-sidebar__user-designation">Frontend Developer</p>
+        </div>
+      </div> -->
+      <ul class="app-menu">
+        <li><a class="app-menu__item" href="dashboard.html"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Dashboard</span></a></li>
+        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-laptop"></i><span class="app-menu__label">Quản Lí Cây Dược Liệu</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+          <ul class="treeview-menu">
+            <li><a class="treeview-item" th:href="@{/Admin/Danh-Sach-Cay-Duoc-Lieu}"><i class="icon fa fa-circle-o"></i>Danh Sách Cây Dược Liệu</a></li>
+           
+            <li><a class="treeview-item" th:href="@{/Admin/Danh-Sach-Quy-Kinh}"><i class="icon fa fa-circle-o"></i> Danh Sách Quy Kinh</a></li>
+            <li><a class="treeview-item" th:href="@{/Admin/Danh-Sach-Tinh-Vi}"><i class="icon fa fa-circle-o"></i> Danh Sách Tính Vị</a></li>
+            <li><a class="treeview-item" th:href="@{/Admin/Danh-Sach-Bo-Phan-Su-Dung}"><i class="icon fa fa-circle-o"></i> Danh Sách Bộ Phận Sử Dụng</a></li>
+            <li><a class="treeview-item" th:href="@{/Admin/Danh-Sach-Thanh-Phan-Hoa-Hoc}"><i class="icon fa fa-circle-o"></i> Danh Sách Thành Phần Hóa Học</a></li>
+             <li><a class="treeview-item" th:href="@{/Admin/Danh-Sach-Noi-Phan-Bo}"><i class="icon fa fa-circle-o"></i> Danh Sách Nơi Phân Bố</a></li>
+              <li><a class="treeview-item" th:href="@{/Admin/Danh-Sach-Benh}"><i class="icon fa fa-circle-o"></i> Danh Sách Chủ Trị</a></li>
+               <li><a class="treeview-item" th:href="@{/Admin/Danh-Sach-Tac-Dung}"><i class="icon fa fa-circle-o"></i> Danh Sách Tác Dụng</a></li>
+                <li><a class="treeview-item" th:href="@{/Admin/Danh-Sach-Ho-Duoc-Lieu}"><i class="icon fa fa-circle-o"></i> Danh Sách Họ Dược Liệu</a></li>
+                 <li><a class="treeview-item" th:href="@{/Admin/Danh-Sach-Ten-Goi-Khac}"><i class="icon fa fa-circle-o"></i>Danh Sách Tên Gọi Khác</a></li>
+              
+            
+          </ul>
+        </li>
+      
+        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">Quản Lí Hỏi Đáp</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+          <ul class="treeview-menu">
+            <li><a class="treeview-item" th:href="@{/Admin/Danh-Sach-Cau-Hoi-Cho-Duyet}"><i class="icon fa fa-circle-o"></i>Danh Sách Câu Hỏi Chờ Phê Duyệt</a></li>
+            <li><a class="treeview-item" th:href="@{/Admin/Danh-Sach-Cau-Tra-Loi}"><i class="icon fa fa-circle-o"></i>Danh Sách Câu Trả Lời Cần Báo Cáo</a></li>
+            <li><a class="treeview-item" th:href="@{/Admin/Danh-Sach-Cau-Hoi-Cho-Duyet}"><i class="icon fa fa-circle-o"></i>Danh Sách Câu Hỏi</a></li>
+            <li><a class="treeview-item" th:href="@{/Admin/Danh-Sach-Cau-Hoi-Cho-Duyet}"><i class="icon fa fa-circle-o"></i>Danh Sách Câu Trả Lời</a></li>
+            
+           
+            <li><a class="treeview-item" href="form-notifications.html"><i class="icon fa fa-circle-o"></i> Form Notifications</a></li>
+          </ul>
+        </li>
+        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Quản Lí Bài Viết</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+          <ul class="treeview-menu">
+             <li><a class="treeview-item" th:href="@{/Admin/Danh-Sach-Bai-Viet-Cho-Phe-Duyet}"><i class="icon fa fa-circle-o"></i>Danh Sách Bài Viết Chờ Phê Duyệt</a></li>
+            <li><a class="treeview-item" href="#"><i class="icon fa fa-circle-o"></i>Danh Sách Bài Viết</a></li>
+          </ul>
+        </li>
+        <!-- <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-file-text"></i><span class="app-menu__label">Pages</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+          <ul class="treeview-menu">
+            <li><a class="treeview-item" href="blank-page.html"><i class="icon fa fa-circle-o"></i> Blank Page</a></li>
+            <li><a class="treeview-item" href="page-login.html"><i class="icon fa fa-circle-o"></i> Login Page</a></li>
+            <li><a class="treeview-item" href="page-lockscreen.html"><i class="icon fa fa-circle-o"></i> Lockscreen Page</a></li>
+            <li><a class="treeview-item" href="page-user.html"><i class="icon fa fa-circle-o"></i> User Page</a></li>
+            <li><a class="treeview-item" href="page-invoice.html"><i class="icon fa fa-circle-o"></i> Invoice Page</a></li>
+            <li><a class="treeview-item" href="page-calendar.html"><i class="icon fa fa-circle-o"></i> Calendar Page</a></li>
+            <li><a class="treeview-item" href="page-mailbox.html"><i class="icon fa fa-circle-o"></i> Mailbox</a></li>
+            <li><a class="treeview-item" href="page-error.html"><i class="icon fa fa-circle-o"></i> Error Page</a></li>
+          </ul>
+        </li>
+        <li><a class="app-menu__item" href="docs.html"><i class="app-menu__icon fa fa-file-code-o"></i><span class="app-menu__label">Docs</span></a></li> -->
+      </ul>
+    </aside>
+</body>
+</html>
