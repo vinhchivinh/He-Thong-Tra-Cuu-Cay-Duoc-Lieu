@@ -9,14 +9,15 @@
   Phê duyệt bài viết
   Xem và xóa câu trả lời bị báo cáo
   
-- Người dùng chưa có tài khoản
-  Tra cứu cây dược liệu bằng hình ảnh, tên , kí tự
+ Người dùng chưa có tài khoản:
+  - Tra cứu cây dược liệu bằng hình ảnh, tên , kí tự
+  - Đăng kí tài khoản
   
-- Người dùng có tài khoản
-  T
-  Đăng câu hỏi và chờ phê duyệt
-  Đăng bài viết và chờ phê duyệt
-  Báo cáo câu trả lời không phù hợp
+Người dùng có tài khoản:
+- Thừa kế các chức năng của người dùng chưa có tài khoản
+- Đăng câu hỏi và chờ phê duyệt
+- Đăng bài viết và chờ phê duyệt
+- Báo cáo câu trả lời không phù hợp
 
 # Công Nghệ Sử Dụng
 -Spring boot ( 2.7.4 )
