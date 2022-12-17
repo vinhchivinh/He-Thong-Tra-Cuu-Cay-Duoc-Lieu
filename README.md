@@ -25,7 +25,7 @@ Người dùng có tài khoản:
 # Công Nghệ Sử Dụng
 - Spring boot ( 2.7.4 )
 - Spring JPA
-- Sql Server 
+- SQL Server 
 - Teachable Machine
 - Ajax
 - Boostrap 4
