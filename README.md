@@ -3,6 +3,7 @@
 
 # Các Chức Năng
  Admin:
+- Đăng nhập, đăng xuất 
 - CRUD cây dược liệu
 - CRUD các thuộc tính cây dược liệu
 - Phê duyệt câu hỏi
@@ -12,8 +13,9 @@
  Người dùng chưa có tài khoản:
   - Tra cứu cây dược liệu bằng hình ảnh, tên , kí tự
   - Đăng kí tài khoản
-  
+  - 
 Người dùng có tài khoản:
+- Đăng nhập, đăng xuất
 - Thừa kế các chức năng của người dùng chưa có tài khoản
 - Đăng câu hỏi và chờ phê duyệt
 - Đăng bài viết và chờ phê duyệt
