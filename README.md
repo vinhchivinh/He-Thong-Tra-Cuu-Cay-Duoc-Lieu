@@ -20,10 +20,10 @@ Người dùng có tài khoản:
 - Báo cáo câu trả lời không phù hợp
 
 # Công Nghệ Sử Dụng
--Spring boot ( 2.7.4 )
--Spring JPA
--Sql Server (
--Teachable Machine
--Ajax
--Boostrap 4
--Thymeleaf
+- Spring boot ( 2.7.4 )
+- Spring JPA
+- Sql Server 
+- Teachable Machine
+- Ajax
+- Boostrap 4
+- Thymeleaf
