@@ -3,7 +3,7 @@
 
 # Các Chức Năng
 - Admin:
-  CRUD cây dược liệu
+- CRUD cây dược liệu
   CRUD các thuộc tính cây dược liệu
   Phê duyệt câu hỏi
   Phê duyệt bài viết
