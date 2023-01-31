@@ -11,7 +11,7 @@
 - Phê duyệt bài viết
 - Xem và xóa câu trả lời bị báo cáo
  
- Người dùng chưa có tài khoản:
+Người dùng chưa có tài khoản:
   - Tra cứu cây dược liệu bằng hình ảnh, tên , kí tự
   - Đăng kí tài khoản
   - Xem danh sách và chi tiết câu hỏi, bài viết
