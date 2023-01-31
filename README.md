@@ -15,6 +15,7 @@ Người dùng chưa có tài khoản:
   - Tra cứu cây dược liệu bằng hình ảnh, tên , kí tự
   - Đăng kí tài khoản
   - Xem danh sách và chi tiết câu hỏi, bài viết
+  
 Người dùng có tài khoản:
 - Đăng nhập, đăng xuất
 - Thừa kế các chức năng của người dùng chưa có tài khoản
