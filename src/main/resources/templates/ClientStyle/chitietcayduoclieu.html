@@ -127,7 +127,8 @@
 
                         <p><span style=""><strong>Chủ Trị:&nbsp;</strong>
                         	<th:block th:each="object:${cayduoclieu.getBenh()}">
-								<span th:text="${object.getTenbenh()}">
+								<span th:text="${object.getTenbenh()}+','">
+								
 								</span>
 							</th:block></span>
                         </p>

@@ -325,7 +325,8 @@ public class ControllerClient {
 		model.addAttribute("count",count);
 		model.addAttribute("page_present",page_present);
 
-		return "Client/danhsachbenh";
+		return "Client/danhsachbenh"; 
+	
 	}
 	/*
 	 * Controller Baiviet
