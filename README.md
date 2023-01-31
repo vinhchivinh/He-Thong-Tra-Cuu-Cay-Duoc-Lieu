@@ -20,7 +20,7 @@ Người dùng có tài khoản:
 - Đăng nhập, đăng xuất
 - Thừa kế các chức năng của người dùng chưa có tài khoản
 - Đăng câu hỏi và chờ phê duyệt
-- Đăng bài viết và chờ phê duyệt
+- Đóng góp bài viết và chờ phê duyệt
 - Báo cáo câu trả lời không phù hợp
 
 # Công Nghệ Sử Dụng
